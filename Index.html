@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyanshu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #1e1e1e; /* Dark background color */
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #61dafb;
+        }
+
+        .profile-picture {
+            max-width: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px; /* Center the profile picture */
+            display: block;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .dot {
+            position: absolute;
+            background-color: #fff; /* white color */
+            border-radius: 50%;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #fff; /* white color */
+            font-size: 30px; /* Adjust the size as needed */
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .download-cv {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #61dafb;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold; /* Make the text bold */
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Profile.png" alt="Profile Picture" class="profile-picture">
+
+        <h1>Divyanshu</h1>
+        <p><strong>Email: gdivyanshu04@gmail.com</strong></p>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://github.com/Divyanshu002" target="_blank"><i class="fab fa-github" style="color: #fff; font-size: 30px;"></i></a>
+            <a href="https://www.linkedin.com/in/divyanshu-d-bb555421a/" target="_blank"><i class="fab fa-linkedin" style="color: #fff; font-size: 30px;"></i></a>
+        </div>
+
+        <!-- Download Resume Button -->
+        <a href="path/to/your/resume.pdf" class="download-cv" download>Download Resume</a>
+    </div>
+
+    <!-- White dot elements -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const numDots = 10;
+
+            for (let i = 0; i < numDots; i++) {
+                createDot();
+            }
+
+            function createDot() {
+                const dot = document.createElement("div");
+                dot.className = "dot";
+                dot.style.width = "10px";
+                dot.style.height = "10px";
+                dot.style.left = `${Math.random() * 100}%`;
+                dot.style.top = `${Math.random() * 100}%`;
+                dot.style.animation = `float ${(Math.random() * 2) + 1}s ease-in-out infinite`;
+                document.body.appendChild(dot);
+            }
+        });
+    </script>
+</body>
+</html>
